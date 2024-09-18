@@ -77,7 +77,9 @@
 }
 
 .card-content {
-  background-color: #0b101d;
+  background: linear-gradient(0deg, #15161f, #15161f),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    linear-gradient(0deg, #0b101d, #0b101d);
   border-radius: 0 0 10px 10px;
   display: flex;
   justify-content: center;
