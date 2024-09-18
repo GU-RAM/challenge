@@ -9,11 +9,12 @@ import {
 import { SafePipe } from '@betlive/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-video-dialog',
   standalone: true,
-  imports: [SafePipe, MatDialogModule],
+  imports: [SafePipe, MatDialogModule, TranslateModule],
   templateUrl: './video-dialog.component.html',
   styleUrls: ['./video-dialog.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

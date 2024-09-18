@@ -14,18 +14,24 @@ import { MatButtonModule } from '@angular/material/button';
 import { ProgressBarService } from '../services';
 import { ProgressBarComponent } from '../progress-bar/progress-bar.component';
 import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-products-and-progress',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, ProgressBarComponent],
+  imports: [
+    CommonModule,
+    MatButtonModule,
+    ProgressBarComponent,
+    TranslateModule,
+  ],
   templateUrl: './products-and-progress.component.html',
   styleUrls: ['./products-and-progress.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductsAndProgressComponent {
-  @Input() pathId: string = '';
   translate: TranslateService = inject(TranslateService);
+  @Input() pathId: string = '';
   @Output() pathIdChange = new EventEmitter<string>();
   private router = inject(Router);
   products: Product[] = PRODUCTS_PROGRESS;
