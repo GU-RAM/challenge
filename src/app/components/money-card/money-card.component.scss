@@ -21,8 +21,12 @@
 }
 
 .gold {
-  background: linear-gradient(90deg, #1b0e00 0%, #f1d39799 50%, #2f231399 90%);
-  box-shadow: inset -100px 0px 100px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(
+    90deg,
+    #1b0e00 0%,
+    rgba(241, 211, 151, 1.6) 50%,
+    rgba(47, 35, 19, 1.6) 90%
+  );
 }
 
 .custom-card {
