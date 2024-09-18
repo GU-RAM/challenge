@@ -1,5 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectorRef, Component, OnChanges } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+} from '@angular/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { ProgressBarService } from '../services';
 import { TooltipOnclickDirective } from '@betlive/core';
@@ -16,8 +20,9 @@ import { MatIconModule } from '@angular/material/icon';
   ],
   templateUrl: './progress-bar.component.html',
   styleUrls: ['./progress-bar.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProgressBarComponent implements OnChanges {
+export class ProgressBarComponent {
   breakpoints: string[] = ['50C', '150C', '300C', '400C', '500C', '1000C'];
   isTooltipVisible: boolean = false;
 
@@ -34,10 +39,5 @@ export class ProgressBarComponent implements OnChanges {
 
   get tooltipText(): string {
     return this.progressBarService.tooltipText();
-  }
-
-  ngOnChanges() {
-    this.cdr.markForCheck();
-    console.log('aaa');
   }
 }

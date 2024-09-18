@@ -7,8 +7,6 @@ import {
   OnDestroy,
 } from '@angular/core';
 import { SafePipe } from '@betlive/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
 
 @Component({
