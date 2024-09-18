@@ -6,6 +6,10 @@
   width: 100%;
   z-index: 22;
 
+  @media (max-width: 576px) {
+    display: none;
+  }
+
   .content-wrapper {
     max-width: 1200px;
     margin: 0 auto;

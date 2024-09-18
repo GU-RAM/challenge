@@ -35,7 +35,7 @@ export class CarouselComponent {
   constructor(private cdr: ChangeDetectorRef) {}
 
   getTransform() {
-    return `translateX(-${this.currentIndex * (this.itemWidth / 2)}%)`;
+    // return `translateX(-${this.currentIndex * (this.itemWidth / 2)}%)`;
   }
 
   next() {

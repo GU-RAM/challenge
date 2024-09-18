@@ -5,6 +5,7 @@ import {
   inject,
   Input,
   Output,
+  OnInit,
 } from '@angular/core';
 import { Product } from '../models';
 import { CommonModule } from '@angular/common';
@@ -29,7 +30,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrls: ['./products-and-progress.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProductsAndProgressComponent {
+export class ProductsAndProgressComponent implements OnInit {
   translate: TranslateService = inject(TranslateService);
   @Input() pathId: string = '';
   @Output() pathIdChange = new EventEmitter<string>();
@@ -39,6 +40,13 @@ export class ProductsAndProgressComponent {
 
   constructor(private progressBarService: ProgressBarService) {}
 
+  ngOnInit() {
+    const savedProduct = localStorage.getItem('activeProduct');
+    if (savedProduct) {
+      this.activeProduct = savedProduct;
+    }
+  }
+
   sendPathId() {
     this.pathIdChange.emit(this.pathId);
   }
@@ -47,6 +55,8 @@ export class ProductsAndProgressComponent {
     this.router.navigate([`main/${name}`]);
 
     this.activeProduct = name;
+
+    localStorage.setItem('activeProduct', name);
 
     const newProgress = Math.floor(Math.random() * 100) + 1;
     const newTooltipText = name;
