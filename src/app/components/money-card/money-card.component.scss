@@ -12,12 +12,12 @@
 }
 
 .bronze {
-  background: linear-gradient(
-    to right,
-    #000 -20%,
-    #7886a8cc 60%,
-    #262933cc 100%
-  );
+  background: linear-gradient(0deg, #0d0d0d, #0d0d0d),
+    radial-gradient(
+      87.51% 178.71% at 79.58% 0%,
+      rgba(120, 134, 168, 1) 0%,
+      rgba(38, 41, 51, 1) 100%
+    );
 }
 
 .gold {
