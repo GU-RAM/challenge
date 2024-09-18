@@ -10,9 +10,9 @@
         <img class="w-full" [src]="card.image" alt="Card Image" />
         <div class="card-content px-6 py-4">
           <button
-            type="main-button"
+            type="button"
             [routerLink]="['/details/', card.id]"
-            class="red-btn"
+            class="red-btn main-button"
           >
             {{ "GET_MORE" | translate }}
           </button>

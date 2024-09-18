@@ -156,6 +156,20 @@ body {
   padding: 20px 30px;
   background-color: #f70628;
   border-radius: 10px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.main-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.main-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .custom-tooltip {
