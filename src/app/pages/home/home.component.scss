@@ -78,11 +78,11 @@
       transform: translateY(-3px);
     }
 
-    &:active {
-      background-color: #505358cc;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-      transform: translateY(1px);
-    }
+    // &:active {
+    //   background-color: #505358cc;
+    //   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    //   transform: translateY(1px);
+    // }
 
     &:focus {
       outline: none;

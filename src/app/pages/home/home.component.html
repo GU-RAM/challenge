@@ -36,7 +36,6 @@
       {{ "FROM_JACKPOT" | translate }}
     </h2>
   </section>
-  <router-outlet></router-outlet>
   <section class="main-cards">
     <app-car-card></app-car-card>
     <app-money-card></app-money-card>
@@ -44,9 +43,7 @@
 
   <section class="main">
     <section class="progress-bar-stepper">
-      <app-products-and-progress
-        [pathId]="!id ? '' : id"
-      ></app-products-and-progress>
+      <router-outlet></router-outlet>
     </section>
 
     <section class="carousel">

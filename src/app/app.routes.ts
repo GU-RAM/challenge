@@ -16,14 +16,27 @@ export const routes: Routes = [
           ),
       },
       {
-        path: 'main/:id',
-        loadComponent: () =>
-          import('./pages/home/home.component').then((m) => m.HomeComponent),
-      },
-      {
         path: 'main',
         loadComponent: () =>
           import('./pages/home/home.component').then((m) => m.HomeComponent),
+        children: [
+          {
+            path: '',
+            loadComponent: () =>
+              import(
+                './pages/home/products-and-progress/products-and-progress.component'
+              ).then((m) => m.ProductsAndProgressComponent),
+            children: [
+              {
+                path: ':id',
+                loadComponent: () =>
+                  import(
+                    './pages/home/progress-bar/progress-bar.component'
+                  ).then((m) => m.ProgressBarComponent),
+              },
+            ],
+          },
+        ],
       },
       {
         path: 'video-instruction',

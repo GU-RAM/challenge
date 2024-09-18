@@ -2,13 +2,12 @@
   <div class="product-groups">
     @for (product of products; track product; let first = $first, last = $last)
     {
-    <div
+    <a
       class="product-groups_col"
       appTooltipOnclick=""
       (click)="getProductTypesName(product.pathName)"
-      [ngClass]="{
-        active: isActive(product.pathName)
-      }"
+      [routerLink]="product.pathName"
+      routerLinkActive="active"
     >
       <span>
         <div [ngClass]="{ disabled: !isActive(product.pathName) }"></div>
@@ -19,7 +18,7 @@
         />
       </span>
       <span>{{ product.name }}</span>
-    </div>
+    </a>
     }
   </div>
   <div class="progress-bar">

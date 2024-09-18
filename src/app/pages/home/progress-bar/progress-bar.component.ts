@@ -26,12 +26,7 @@ export class ProgressBarComponent {
   breakpoints: string[] = ['50C', '150C', '300C', '400C', '500C', '1000C'];
   isTooltipVisible: boolean = false;
 
-  constructor(
-    public progressBarService: ProgressBarService,
-    private cdr: ChangeDetectorRef
-  ) {
-    console.log(23342);
-  }
+  constructor(public progressBarService: ProgressBarService) {}
 
   get progress(): number {
     return this.progressBarService.progressValue();
