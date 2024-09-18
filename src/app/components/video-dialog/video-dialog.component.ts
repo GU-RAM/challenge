@@ -8,6 +8,7 @@ import {
 } from '@angular/core';
 import { SafePipe } from '@betlive/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-video-dialog',
@@ -18,6 +19,7 @@ import { Router } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class VideoDialogComponent implements OnDestroy {
+  translate: TranslateService = inject(TranslateService);
   videoUrl: string;
   router = inject(Router);
 

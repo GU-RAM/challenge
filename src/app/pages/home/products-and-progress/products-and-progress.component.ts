@@ -13,6 +13,7 @@ import { PRODUCTS_PROGRESS } from 'app/core/constants/constants';
 import { MatButtonModule } from '@angular/material/button';
 import { ProgressBarService } from '../services';
 import { ProgressBarComponent } from '../progress-bar/progress-bar.component';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-products-and-progress',
@@ -24,6 +25,7 @@ import { ProgressBarComponent } from '../progress-bar/progress-bar.component';
 })
 export class ProductsAndProgressComponent {
   @Input() pathId: string = '';
+  translate: TranslateService = inject(TranslateService);
   @Output() pathIdChange = new EventEmitter<string>();
   private router = inject(Router);
   products: Product[] = PRODUCTS_PROGRESS;
