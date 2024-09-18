@@ -66,6 +66,27 @@
     padding: 1.5rem;
     background-color: #202333cc;
     border-radius: 1rem;
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease,
+      transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      background-color: #404355cc;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      transform: translateY(-3px);
+    }
+
+    &:active {
+      background-color: #505358cc;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      transform: translateY(1px);
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
 
   &_description-winning-case {
