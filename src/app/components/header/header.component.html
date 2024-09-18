@@ -1,0 +1,26 @@
+<header
+  class="main-header"
+  [ngClass]="{ 'non-transparent': isHeaderBelowThreshold }"
+>
+  <div class="content-wrapper">
+    <div>
+      <img src="assets/images/betlive-logo.svg" alt="betlive-logo" />
+    </div>
+    <div>
+      <button>
+        <img
+          src="assets/images/ka.svg"
+          alt="ka"
+          (click)="translateText('ge')"
+        />
+      </button>
+      <button>
+        <img
+          src="assets/images/en.svg"
+          alt="en"
+          (click)="translateText('en')"
+        />
+      </button>
+    </div>
+  </div>
+</header>

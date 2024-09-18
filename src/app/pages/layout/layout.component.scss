@@ -1,0 +1,24 @@
+.main {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 1.25em;
+  margin-top: 100px;
+  padding-bottom: 5rem;
+}
+
+header {
+  display: block;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.introduction {
+  &_winning-info {
+    background: url("assets/images/winner-freespins-background.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

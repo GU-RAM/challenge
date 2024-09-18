@@ -1,0 +1,31 @@
+<div class="product-stepper-container">
+  <div class="product-groups">
+    @for (product of products; track product; let first = $first, last = $last)
+    {
+    <div
+      class="product-groups_col"
+      appTooltipOnclick=""
+      (click)="getProductTypesName(product.pathName)"
+      [ngClass]="{
+        active: isActive(product.pathName)
+      }"
+    >
+      <span>
+        <div [ngClass]="{ disabled: !isActive(product.pathName) }"></div>
+        <img
+          [src]="product.imagePath"
+          alt="{{ product.imagePath }}"
+          loading="lazy"
+        />
+      </span>
+      <span>{{ product.name }}</span>
+    </div>
+    }
+  </div>
+  <div class="progress-bar">
+    <app-progress-bar></app-progress-bar>
+  </div>
+</div>
+<div class="play-game-btn">
+  <button class="main-button">ითამაშე</button>
+</div>

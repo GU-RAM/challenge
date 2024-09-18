@@ -1,0 +1,56 @@
+<main class="home">
+  <section class="introduction">
+    <h1 class="introduction_header">{{ "EVERYDAY" | translate }}</h1>
+    <div class="introduction_winning-info">
+      <p>15 000₾ {{ "AND" | translate }} 150 000 Freespins</p>
+      <hr />
+      <p>
+        <img src="assets/images/J-coin.svg" alt="J-coin" /> 9
+
+        {{ "COIN_WIN" | translate }}
+      </p>
+    </div>
+
+    <div class="introduction_video-instruction"></div>
+    <button
+      (click)="openVideoDialog('YBVAzetyD44')"
+      class="introduction_video-play-btn"
+    >
+      <img
+        src="assets/images/play_circle.svg"
+        alt="Video instruction"
+        loading="lazy"
+      />
+      {{ "VIDEO_INSTRUCTION" | translate }}
+    </button>
+
+    <h2 class="introduction_description-winning-case">
+      9 {{ "ICON" | translate }}
+      <img
+        src="assets/images/equals-icon-green.svg"
+        alt="equals"
+        loading="lazy"
+      />
+      {{ "PORTION" | translate }}
+      <span class="highlight"> 4 800 000 </span>Freespins
+      {{ "FROM_JACKPOT" | translate }}
+    </h2>
+  </section>
+  <router-outlet></router-outlet>
+  <section class="main-cards">
+    <app-car-card></app-car-card>
+    <app-money-card></app-money-card>
+  </section>
+
+  <section class="main">
+    <section class="progress-bar-stepper">
+      <app-products-and-progress
+        [pathId]="!id ? '' : id"
+      ></app-products-and-progress>
+    </section>
+
+    <section class="carousel">
+      <app-carousel [carouselCards]="carouselCards"></app-carousel>
+    </section>
+  </section>
+</main>

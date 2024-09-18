@@ -1,0 +1,60 @@
+<div class="custom-card-wrapper">
+  @for(card of mainCardData(); track card.name) {
+  <mat-card [ngClass]="getCardClasses(card)">
+    <mat-card-header>
+      <div class="card-header">
+        <div class="header-left">
+          @if(additionalTxt) {
+          <p class="additional-text">{{ additionalTxt }}</p>
+          }
+          <ng-container *ngIf="card.headerImageSrcLeft; else headerLeftText">
+            <img
+              [src]="'assets/images/' + card.headerImageSrcLeft"
+              alt="Header Image"
+              loading="lazy"
+            />
+          </ng-container>
+          <ng-template #headerLeftText>
+            <div *ngIf="card.headerLeftTxt">{{ card.headerLeftTxt }}</div>
+          </ng-template>
+        </div>
+        <ng-container *ngIf="card.headerImageSrcRight; else headerRightText">
+          <div class="header-right-img">
+            <img
+              [src]="'assets/images/' + card.headerImageSrcRight"
+              alt="Header Image"
+              loading="lazy"
+            />
+            <div
+              *ngIf="card.headerRightTxt"
+              [innerHTML]="card.headerRightTxt"
+            ></div>
+          </div>
+        </ng-container>
+        <ng-template #headerRightText>
+          <div class="header-right">
+            <div
+              *ngIf="card.headerRightTxt"
+              [innerHTML]="card.headerRightTxt | highlightText"
+            ></div>
+          </div>
+        </ng-template>
+      </div>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="card-image">
+        <img [src]="'assets/images/' + card.img" alt="Image" loading="lazy" />
+      </div>
+    </mat-card-content>
+
+    <mat-card-footer>
+      <div class="card-collect">
+        @for(progress of card.collect; track progress) {
+        <img [src]="getProgressImage(progress)" alt="progress" loading="lazy" />
+        }
+      </div>
+    </mat-card-footer>
+  </mat-card>
+  }
+</div>

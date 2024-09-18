@@ -1,0 +1,24 @@
+.main-header {
+  padding: 20px;
+  background-color: rgba(32, 36, 46, 0.65);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 22;
+
+  .content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      display: flex;
+      gap: 10px;
+    }
+  }
+}
+
+.non-transparent {
+  background-color: rgba(12, 16, 26, 1);
+}

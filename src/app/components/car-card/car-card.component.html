@@ -1,0 +1,64 @@
+<mat-card class="custom-card">
+  <mat-card-header>
+    <div class="card-header">
+      <div class="header-left">
+        @if(additionalTxt) {
+        <p class="additional-text">{{ additionalTxt }}</p>
+
+        }
+        <ng-container
+          *ngIf="mainCardData()?.headerImageSrcLeft; else headerLeftText"
+        >
+          <img
+            [src]="'assets/images/' + mainCardData().headerImageSrcLeft"
+            alt="Header Image"
+            loading="lazy"
+          />
+        </ng-container>
+        <ng-template #headerLeftText>
+          <div *ngIf="mainCardData()?.headerLeftTxt">
+            {{ mainCardData().headerLeftTxt }}
+          </div>
+        </ng-template>
+      </div>
+      <ng-container
+        *ngIf="mainCardData()?.headerImageSrcRight; else headerRightText"
+      >
+        <div class="header-right-img">
+          <img
+            [src]="'assets/images/' + mainCardData().headerImageSrcRight"
+            alt="Header Image"
+            loading="lazy"
+          />
+          <div
+            *ngIf="mainCardData()?.headerRightTxt"
+            [innerHTML]="mainCardData().headerRightTxt"
+          ></div>
+        </div>
+      </ng-container>
+      <ng-template #headerRightText>
+        <div class="header-right">
+          <div
+            *ngIf="mainCardData()?.headerRightTxt"
+            [innerHTML]="mainCardData().headerRightTxt | highlightText"
+          ></div>
+        </div>
+      </ng-template>
+    </div>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="card-image">
+      <img [src]="geMainImage(isMobile())" alt="Image" loading="lazy" />
+    </div>
+  </mat-card-content>
+
+  <mat-card-footer>
+    <div class="card-collect">
+      @for(progress of carCollect; track progress){
+      <img [src]="getProgressImage(progress)" alt="progress" loading="lazy" />
+
+      }
+    </div>
+  </mat-card-footer>
+</mat-card>

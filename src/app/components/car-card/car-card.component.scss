@@ -1,0 +1,117 @@
+.custom-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25em;
+  background-color: var(--card-color);
+  transition: background-color 0.3s ease;
+  height: 100%;
+  position: relative;
+  background: linear-gradient(to right, #9c0e07 0%, #1a0100 120%);
+  height: 100%;
+  @media (max-width: 768px) {
+    background: linear-gradient(
+      to right,
+      #001d12 -20%,
+      #72ff9100 -10%,
+      #00e27e59 5%
+    );
+    box-shadow: inset -100px 0px 150px rgba(0, 0, 0, 0.5);
+  }
+
+  .additional-text {
+    position: absolute;
+    top: 6.4rem;
+    @media (max-width: 768px) {
+      top: 7rem;
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .small-img {
+      width: 1em;
+    }
+
+    .medium-img {
+      width: 1.65em;
+    }
+
+    .large-img {
+      width: 1.95em;
+      margin: auto;
+    }
+
+    .svg-circle {
+      fill: rgb(66, 60, 60);
+      stroke: blue;
+      stroke-width: 2px;
+    }
+
+    .icon:hover .svg-circle {
+      fill: green;
+    }
+  }
+
+  .card-image {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+
+    @media (max-width: 768px) {
+      margin: 30px 0;
+    }
+
+    .large-img {
+      margin: 0 auto;
+    }
+  }
+
+  .card-img {
+    height: auto;
+  }
+
+  .card-collect {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+
+    img {
+      height: 2rem;
+    }
+  }
+
+  .collect-icon {
+    width: 1.25em;
+    height: 1.25em;
+  }
+
+  .header-right-img {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    padding: 7px;
+    padding-left: 5px;
+    padding-right: 15px;
+    border-radius: 20px;
+    font-size: 10px;
+  }
+}
+
+@media (width: 768px) {
+  .mobile-change {
+    background-color: #ff9800;
+  }
+
+  .card-prizeProgress {
+    justify-content: space-evenly;
+    gap: 3px;
+  }
+}

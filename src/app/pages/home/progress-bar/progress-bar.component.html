@@ -1,0 +1,20 @@
+<div class="progress-bar-container">
+  <div class="progress-bar-wrapper">
+    <div class="progress-bar">
+      <div class="progress" [style.width.%]="progress"></div>
+    </div>
+    <div class="breakpoints">
+      <div class="breakpoint" *ngFor="let point of breakpoints">
+        <div class="circle"></div>
+        <p>{{ point }}</p>
+      </div>
+    </div>
+  </div>
+  <button appTooltipOnclick="{{ tooltipText }}" class="tooltip-icon">
+    <img
+      src="assets/images/tooltip.svg"
+      alt="tooltip-icon"
+      class="tooltip-icon"
+    />
+  </button>
+</div>

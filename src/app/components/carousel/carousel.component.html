@@ -1,0 +1,27 @@
+<div class="carousel-wrapper">
+  <button class="carousel-button left-button" (click)="prev()">
+    <img src="assets/images/arrow-back.svg" alt="arrow back" />
+  </button>
+  <div class="carousel-container">
+    <div class="carousel" [style.transform]="getTransform()">
+      @for(card of carouselCards; track card.id) {
+      <div class="carousel-item">
+        <div class="max-w-sm rounded overflow-hidden shadow-lg"></div>
+        <img class="w-full" [src]="card.image" alt="Card Image" />
+        <div class="card-content px-6 py-4">
+          <button
+            type="main-button"
+            [routerLink]="['/details/', card.id]"
+            class="red-btn"
+          >
+            {{ "GET_MORE" | translate }}
+          </button>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  <button class="carousel-button right-button" (click)="next()">
+    <img src="assets/images/arrow-front.svg" alt="arrow front" />
+  </button>
+</div>

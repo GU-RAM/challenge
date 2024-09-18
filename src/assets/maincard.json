@@ -1,0 +1,172 @@
+{
+  "mainCardData": [
+    {
+      "id": 1,
+      "group": "car",
+      "name": "BMW",
+      "headerLeftTxt": "",
+      "headerRightTxt": "დარჩენილია 1/1",
+      "headerImageSrcLeft": "BMW-logo.svg",
+      "headerImageSrcRight": "",
+      "progressCollectedImage": "",
+      "collect": [
+        {
+          "isCollected": false,
+          "imgProgress": "BMW-progress.svg",
+          "imgCollected": "BMW-progress-collected.svg",
+          "amount": 10
+        },
+        {
+          "isCollected": false,
+          "imgProgress": "BMW-progress.svg",
+          "imgCollected": "BMW-progress-collected.svg",
+          "amount": 10
+        },
+        {
+          "isCollected": false,
+          "imgProgress": "BMW-progress.svg",
+          "imgCollected": "BMW-progress-collected.svg",
+          "amount": 10
+        },
+        {
+          "isCollected": false,
+          "imgProgress": "BMW-progress.svg",
+          "imgCollected": "BMW-progress-collected.svg",
+          "amount": 10
+        },
+        {
+          "isCollected": false,
+          "imgProgress": "BMW-progress.svg",
+          "imgCollected": "BMW-progress-collected.svg",
+          "amount": 10
+        },
+        {
+          "isCollected": false,
+          "imgProgress": "BMW-progress.svg",
+          "imgCollected": "BMW-progress-collected.svg",
+          "amount": 10
+        },
+        {
+          "isCollected": false,
+          "imgProgress": "BMW-progress.svg",
+          "imgCollected": "BMW-progress-collected.svg",
+          "amount": 10
+        },
+        {
+          "isCollected": false,
+          "imgProgress": "BMW-progress.svg",
+          "imgCollected": "BMW-progress-collected.svg",
+          "amount": 10
+        }
+      ],
+      "collectedImg": "BMW-progress-collected.svg",
+      "img": "car-BMW.svg",
+      "mobileImg": "car-BMW-green.svg"
+    },
+
+    {
+      "id": 2,
+      "group": "money",
+      "name": "Gold",
+      "headerLeftTxt": "გათამაშდა დღეს 23:25-ზე",
+      "headerRight": "",
+      "headerRightTxt": "T*******N",
+      "headerImageSrcLeft": "",
+      "headerImageSrcRight": "money-progress-gold-icon.svg",
+      "collect": [
+        {
+          "isCollected": false,
+          "imgProgress": "money-progress-gold.svg",
+          "imgCollected": "money-progress-collected-gold.svg"
+        },
+        {
+          "isCollected": false,
+          "imgProgress": "money-progress-gold.svg",
+          "imgCollected": "money-progress-collected-gold.svg"
+        },
+        {
+          "isCollected": false,
+          "imgProgress": "money-progress-gold.svg",
+          "imgCollected": "money-progress-collected-gold.svg"
+        },
+        {
+          "isCollected": false,
+          "imgProgress": "money-progress-gold.svg",
+          "imgCollected": "money-progress-collected-gold.svg"
+        },
+        {
+          "isCollected": false,
+          "imgProgress": "money-progress-gold.svg",
+          "imgCollected": "money-progress-collected-gold.svg"
+        },
+        {
+          "isCollected": false,
+          "imgProgress": "money-progress-gold.svg",
+          "imgCollected": "money-progress-collected-gold.svg"
+        },
+        {
+          "isCollected": false,
+          "imgProgress": "money-progress-gold.svg",
+          "imgCollected": "money-progress-collected-gold.svg"
+        },
+        {
+          "isCollected": false,
+          "imgProgress": "money-progress-gold.svg",
+          "imgCollected": "money-progress-collected-gold.svg"
+        },
+        {
+          "isCollected": false,
+          "imgProgress": "money-progress-gold.svg",
+          "imgCollected": "money-progress-collected-gold.svg"
+        },
+        {
+          "isCollected": false,
+          "imgProgress": "money-progress-gold.svg",
+          "imgCollected": "money-progress-collected-gold.svg"
+        }
+      ],
+      "collectedImg": "money-progress-collected-gold.svg",
+      "img": "15000gel.svg",
+      "mobileImg": ""
+    },
+    {
+      "id": 3,
+      "group": "money",
+      "name": "Bronze",
+      "headerLeftTxt": "თამაშდება 4 იანვრამდე",
+      "headerRightTxt": "დარჩენილია 145/200",
+      "headerImageSrcLeft": "",
+      "headerImageSrcRight": "",
+      "collect": [
+        {
+          "isCollected": false,
+          "imgProgress": "money-progress-bronze.svg",
+          "imgCollected": "money-progress-collected-bronze.svg"
+        },
+        {
+          "isCollected": false,
+          "imgProgress": "money-progress-bronze.svg",
+          "imgCollected": "money-progress-collected-bronze.svg"
+        },
+        {
+          "isCollected": false,
+          "imgProgress": "money-progress-bronze.svg",
+          "imgCollected": "money-progress-collected-bronze.svg"
+        },
+        {
+          "isCollected": false,
+          "imgProgress": "money-progress-bronze.svg",
+          "imgCollected": "money-progress-collected-bronze.svg"
+        },
+        {
+          "isCollected": false,
+          "imgProgress": "money-progress-bronze.svg",
+          "imgCollected": "money-progress-collected-bronze.svg"
+        }
+      ],
+      "collectedImg": "money-progress-collected-bronze.svg",
+      "img": "5000gel.svg",
+      "mobileImg": ""
+    }
+  ]
+}
